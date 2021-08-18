@@ -15,45 +15,6 @@
 </head>
 
 <body>
-    <div id="infoModal" class="modal is-active">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <div class="box is-clearfix">
-                <h2 class="subtitle"><strong>How this page should be used</strong></h2>
-                <p class="is-size-7">
-                    After sitting up straight and clicking on <strong>"Start video"</strong> you should
-                    click on <strong>"Capture current position"</strong> to save the current calculated proportion
-                    and vertical position of your head, and use that as a baseline. Upon clicking, the page will
-                    try to measure your movements from the webcam every <strong>1500</strong> milliseconds by default,
-                    and compare it to the captured values. By default, if the distance
-                    difference is greater than or equal to <strong>4%</strong> you will be notified every 
-                    <strong>15 seconds</strong>, also by default. You can control these values on the page.
-                    If you want to recapture your position just click on the capture button again.
-                </p>
-                <hr>
-                <p class="is-size-7">
-                    You might need to stop the video feed to allow other
-                    apps to use the camera. You can also hide the video output
-                    to reduce resource usage.
-                </p>
-                <hr>
-                <h2 class="subtitle"><strong>Info & disclaimer</strong></h2>
-                <p class="is-size-7">
-                    This page uses data from a client side facial detection library and tries to
-                    detect if you're getting closer to the camer which might indicate slouching.
-                    It then sends you a local notification for you to pull back and straighten up.
-                </p>
-                <hr>
-                <p class="is-size-7">
-                    In <strong>no way</strong> does the page send any client data back to any servers.
-                    This is purely a client side implementation. We use google analytics just to track 
-                    website traffic. You can use a tool like uBlock Origin to block this.
-                </p>
-                <button class="toggleInfoModal button is-pulled-right" aria-label="close">Close</button>
-            </div>
-        </div>
-        <button class="toggleInfoModal modal-close is-large" aria-label="close"></button>
-    </div>
     <div class="container is-fullhd">
         <section class="hero is-dark is-header">
             <div class="hero-body">
@@ -67,10 +28,6 @@
                 </div>
             </div>
         </section>
-        <div class="notification is-marginless">
-            If you are not sure how to sit correctly, take a look at
-            <a href="https://www.wikihow.com/Sit-up-Straight-at-a-Computer">this</a> link or just google it.
-        </div>
         <div id="errorContainer" class="notification is-warning is-marginless">
 
         </div>
@@ -142,16 +99,6 @@
         <div class="notification is-marginless">
             This page only uses your camera feed for <strong>client side measurements</strong>. <a class="toggleInfoModal">Info</a>
         </div>
-        <footer class="footer">
-            <div class="content has-text-centered">
-                <p>
-                    <strong>Slouch stoppah</strong> by <a href="https://github.com/lnenad">Nenad Lukic</a>.
-                    <strong>Sponsored</strong> by <a href="https://mockadillo.com">Mockadillo</a>.
-                    The <a href="https://github.com/lnenad/slouch-stoppah">source code</a> is licensed
-                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-                </p>
-            </div>
-        </footer>
 
     </div>
 
@@ -162,14 +109,5 @@
 <script src="js/howler.min.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/app.js" async></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128132871-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-128132871-1');
-</script>
 
 </html>

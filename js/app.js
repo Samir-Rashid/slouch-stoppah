@@ -72,9 +72,9 @@
             
         noFace++;
         if (noFace > 5) {
-            displayError("Tracking stopped because we are unable to detect a face. Maybe increase light intensity?");
-            stopCamera();
-            return;
+            displayError("Unable to detect a face. Maybe increase light intensity?");
+            // stopCamera();
+            // return;
         }
         faceDetectionTimeout = setTimeout(performDetection, detectionFrequency);
     }
